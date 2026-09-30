@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual MasterCard — Demo</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Arial,sans-serif;background:#eef2f7;display:flex;align-items:center;justify-content:center;padding:20px;color:#172033}
+.wrap{width:min(430px,100%)}
+.card{position:relative;overflow:hidden;min-height:245px;border-radius:24px;padding:25px;color:#fff;background:linear-gradient(135deg,#111827,#303846 55%,#0b0f16);box-shadow:0 18px 45px rgba(0,0,0,.25)}
+.card:before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;right:-90px;top:-100px;background:rgba(255,255,255,.06)}
+.top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.brand{font-size:18px;font-weight:700;letter-spacing:.4px}
+.status{font-size:12px;border:1px solid rgba(255,255,255,.35);padding:6px 10px;border-radius:20px}
+.chip{width:48px;height:36px;border-radius:8px;margin-top:35px;background:linear-gradient(135deg,#d7d7d7,#777);position:relative}
+.chip:after{content:"";position:absolute;left:15px;top:0;width:2px;height:100%;background:#888;box-shadow:9px 0 #888}
+.label{font-size:10px;color:#b8c0cc;margin-top:22px}
+.number{font-size:21px;letter-spacing:2.4px;margin-top:5px;font-weight:600}
+.bottom{display:flex;justify-content:space-between;align-items:end;margin-top:18px}
+.value{font-size:14px;letter-spacing:1px}
+.master{font-weight:800;font-size:19px;letter-spacing:1px}
+.notice{margin-top:18px;background:#fff;border:1px solid #e2e6ec;border-radius:15px;padding:16px;text-align:center;box-shadow:0 6px 22px rgba(0,0,0,.07)}
+.notice b{display:block;color:#b42318;font-size:17px;margin-bottom:5px}
+.notice span{font-size:13px;color:#667085}
+.demo{margin-top:14px;text-align:center;font-size:12px;color:#667085}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="top">
+      <div class="brand">Virtual MasterCard</div>
+      <div class="status">5& inactive</div>
+    </div>
+    <div class="chip"></div>
+    <div class="label">CARD NO</div>
+    <div class="number">5555 5555 5555 5555</div>
+    <div class="bottom">
+      <div>
+        <div class="label">EXPIRY / DATE</div>
+        <div class="value">12/30</div>
+      </div>
+      <div>
+        <div class="label">CVV</div>
+        <div class="value">•••</div>
+      </div>
+      <div class="master">MC</div>
+    </div>
+  </div>
+  <div class="notice">
+    <b>Card not active</b>
+    <span>This card is currently inactive.</span>
+  </div>
+  <div class="demo">DEMO CARD — Not a real payment card</div>
+</div>
+</body>
+</html>
